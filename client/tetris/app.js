@@ -42,28 +42,30 @@ document.addEventListener('DOMContentLoaded', () => {
   ]
 
   const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino]
+  
   let currentPosition =4
   let currentRotation =0
 
   //randomly select a tetromino and its first rotation
   let random = Math.floor(Math.random()*theTetrominoes.length)
-  let current = theTetrominoes[random][currentRotation];
-
+  let current = theTetrominoes[random][currentRotation]
+ 
   //first rotation
   function draw() {
     current.forEach(index => {
       squares[currentPosition + index].classList.add('tetromino')
+      squares[currentPosition + index].style.backgroundColor = colors[random]
     })
   }
  // undrawing the tetromino
  function undraw() {
-     current.forEach(index => {
-        squares[currentPosition+ index].classList.remove('tetromino')    
-     })
- }
+    current.forEach(index => {
+      squares[currentPosition + index].classList.remove('tetromino')
+      squares[currentPosition + index].style.backgroundColor = ''
+    })
+  }
 
  // tetromino move down every second
-
  timerId= setInterval(moveDown, 1000)
 // functions for keyboard
 function control(e) {
@@ -92,6 +94,7 @@ function control(e) {
 function freeze() {
     if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
         current.forEach(index => squares[currentPosition + index].classList.add('taken'))
+        
         // new falling
         random=Math.floor(Math.random()*theTetrominoes.length)
         current = theTetrominoes[random][currentRotation]
@@ -124,15 +127,17 @@ function moveRight() {
       currentPosition -=1
     }
     draw()
-  }
-
-
-
-
-
-
-
-
+  } 
+// rotation
+function rotate() {
+    undraw()
+    currentRotation ++
+    if(currentRotation === current.length) {
+        currentRotation = 0
+    }
+    current = theTetrominoes[random][currentRotation]
+    draw()
+}
 
 
 })
