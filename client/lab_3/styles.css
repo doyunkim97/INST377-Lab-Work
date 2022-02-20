@@ -115,7 +115,7 @@
   background-color: #5995DA;
   flex: initial;
   width: 300px;
-  
+
 }/* Desktop Styles */
 @media only screen and (min-width: 961px) {
   .page {
@@ -140,3 +140,4 @@
   .feature-3 {
     width: 50%;
   }
+}
