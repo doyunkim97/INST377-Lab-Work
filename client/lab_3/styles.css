@@ -7,7 +7,7 @@
   width: 100%;
   display: inline-block;
   background-color: rgba(0,139, 139,0.8);
-  padding-left: 10px;
+  padding: 10px;
 }
 
 .menu-container {
@@ -16,12 +16,14 @@
   padding: 20px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .menu {
   border: 1px solid #fff;
   width: 900px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .links {
   border: 1px solid #fff;
@@ -61,8 +63,8 @@
 }
 
 .group_project_link,
-.github_link {
-  align-self: flex-end;
+.github {
+  margin-top: auto;
   margin-bottom: 20px;
 }
 
@@ -74,7 +76,7 @@
 .photo-grid {
   width: 900px;
   display: flex;
-  justify-content: center;
+  justify-content : center;
   flex-wrap: wrap;
   flex-direction: row-reverse;
   align-items: center;
