@@ -10,15 +10,23 @@
         <div class="wrapper">
             <div class="container">
                 <div class="notification is-warning">Do Yun Kim's Lab 5</div>
-                <div class="columns">
-                    <div class="page_item">
-                        <form action="/api/foodservicesPG" method="GET">
-                            <div class="form_item">
-                                <label for="fname">First Name</label>
-                                <input type="text" name="fname" id="fname">
+                <div class="columns is-vcentered">
+                    <div class="column is-one-quarter">
+                        <form class="box" action="/api/foodservicesPG" method="GET">
+
+                            <div class="field">
+                                <label class="label">First Name</label>
+                                <input class="input-is-normal" type="text">
                             </div>
-                            <label for="pref">Food Prefrence</label>
-                            <input type="text" name="pref" id="pref">
+                            <div class="field">
+                                <label class="label">Food Prefrence</label>
+                                <input class="input is-normal" type="text">
+                            </div>
+                            <div class="field">
+                                <label class="label">Veggie or Vegan?</label>
+                                
+                            </div>
+
                             <button class="button is-primary" type="submit">Submit</button>
                         </form> 
                     </div>
