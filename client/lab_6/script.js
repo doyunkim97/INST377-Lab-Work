@@ -9,12 +9,12 @@ function restoArrayMake(dataArray) {
   const range = [...Array(15).keys()];
   const listItems = range.map((item, index) => {
     const restNum = getRandomIntInclusive(0, dataArray.length - 1);
-    return dataArray[restNum]; 
+    return dataArray[restNum];
   });
   return listItems;
 }
 function createHtmlList(collection) {
-  const targetList = document.querySelector('.resto-list');
+  const targetList = document.querySelector('.restaruent-list');
   targetList.innerHTML = '';
   collection.forEach((item) => {
     const {name} = item;
@@ -24,19 +24,19 @@ function createHtmlList(collection) {
   });
 }
 async function mainEvent() {
-  console.log('script loaded');
-  const form = document.querySelector('.main_form');
-  const submit = document.querySelector('.submit_button');
-  submit.style.display = 'none';
+  console.log("script loaded");
+  const form = document.querySelector(".first");
+  const submit = document.querySelector(".submit");
 
-  const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'); 
-  const arrayFromJson = await results.json(); 
-  
+  const results = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json");
+  const arrayFromJson = await results.json();
+  console.log(arrayFromJson);
 
   if (arrayFromJson.length > 0) {
-    submit.style.display = 'block';
-    form.addEventListener('submit', async (submitEvent) => {
+    submit.style.display = "block";
+    form.addEventListener("submit", async (submitEvent) => {
       submitEvent.preventDefault();
+      console.log("form submission");
       const restoArray = restoArrayMake(arrayFromJson);
       createHtmlList(restoArray);
     });
