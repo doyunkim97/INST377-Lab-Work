@@ -1,0 +1,39 @@
+<html lang='en'>
+  <head>
+      <meta charset='UTF-8'/>
+      <title>Do Yun Kim Lab 7</title>
+      <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+      <link rel='stylesheet' href='styles.css'/>
+    </head>
+
+<body>
+    <div class="container">Prof A's Lab 7</div>
+    <div class="columns">
+        <form method='get' class='first'>
+            <label for='first-name'>Restaurent Name
+            </label>
+            <input type="text" id="resto_name" name="resto_name">
+
+            <label for='food-preference'>Zip Code
+            </label>
+            <input type="text" id="zip" name="zip">
+            
+            <fieldset class="second">
+                <legend>Veggie or Vegan?</legend>
+                <label for="yes" class="radio-label"> Yes </label>
+                <input type="radio" name="veggie" id="yes">
+
+                <label for="no" class="radio-label"> No </label>
+                <input type="radio" name="Vegan" id="no">
+
+            </fieldset>
+
+            <button class="submit">Submit</button>
+            
+        </form>
+        <div class="third"> <h2>Restaurant List</hw2>
+            <ul class="resto_list"></ul>
+        </div>
+    </div>
+    <script src='script.js' charset='utf-8'></script>
+</body>
