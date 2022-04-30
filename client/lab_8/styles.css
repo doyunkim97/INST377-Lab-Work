@@ -1,103 +1,163 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
+  ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+  background-color: darkslategray;
+  max-width: 1000px;
+}
+
+#map { 
+  height: 400px; 
+  flex: 1;
+}
+
+/* Page Layout */
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.resto_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.resto_list li {
+  margin-top: 5px
+}
+
+.first {
+  background-color: #FFF;
+  width: 250px;
+  max-height: 400px;
+  border-radius: 6px; 
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.last { 
+  background-color: #FFF;
+  margin: auto 10px;
+  min-width: 600px;
+  min-height: 400px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+}
+
+.form_inputs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 0px 10px;
+  margin-top: 10px;
+}
+
+.banner {
+  background-color: rgb(255, 211, 65);
+  border-radius: 4px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  display: flex;
+}
+
+h2 {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.form_inputs label {
+  margin: 10 0 5 0;
+  font-weight: bold;
+  font-size: 1.2em;
   
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-y: hidden;
-    font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
-      ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
-    background-color: darkslategray;
-  }
-  
-  /* Page Layout */
-  
-  .wrapper {
-    display: flex;
-  }
-  
-  .container {
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    border-radius: 5px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    background-color: #ffe089;
-    max-width: 960px;
-  }
-  .columns {
-    display: flex;
-    
-  }
-  
-  .first {
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 5px;
-    margin: auto;
-  }
-  .first input[type='text'] {
-    background-color: #FFFFFF;
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 100%;
-    padding: 7px;
-    font-size: 14px;
-    height: 5%;
-    margin: 5px;
-  }
-  .first label {
-    margin: 5px;
-  }
-  .first button {
-    background-color: #49c78e;
-    margin: 5px;
-    border: none;
-    border-radius: 3px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    max-width: 50%;
-    color: #FFFFFF;
-  }
-  .first button:hover {
-    background-color: #76AEED;
-  }
-  .first button:active {
-    background-color: #407FC7;
-  }
-  .second {
-    border: none;
-    margin-bottom: 10px;
-  }
-  .second legend {
-    padding: 5px;
-  }
-  .second .radio-label {
-    display: block;
-    font-size: 14px;
-  }
-  .second input[type='radio'] {
-    margin-top: 5px;
-  }
-  .second .radio-label,
-  .second input[type='radio'] {
-    float: left;
-  }
-  
-  .third {
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 5px;
-    margin: auto;
-  }
-  
-  
+}
+
+.submit {
+  color: #FFF;
+  background-color: teal;
+  padding: 10px;
+  width: 150px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: none;
+  margin: 15px 30px 15px 30px;
+  border-radius: 4px;
+}
+
+.submit:hover {
+  background-color: rgb(25, 175, 175);
+}
+
+.second {
+  padding: 10px;
+  margin: auto;
+  border: none;
+}
+
+.second label {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.second legend {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.options {
+  float: left;
+}
+
+#zip {
+  margin-bottom: 10px;
+}
+
+.radio_label {
+  padding: 5px;
+  margin: 0 0 0 10;
+}
+
+h2 {
+  margin: 0 auto;
+}
+
+.search_results {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10 auto;
+  flex: 2;
+}
