@@ -66,6 +66,8 @@ body {
   font-size: 16px;
   max-width: 50%;
   color: #FFFFFF;
+  margin: 0 auto;
+  display: block;
 }
 .first button:hover {
   background-color: #76AEED;
