@@ -96,14 +96,20 @@ body {
   text-align: center;
   justify-content: left;
   height: fit-content;
-  width: 700px;
-  border: 2px;
+  width: 1200px;
+  border: 3px;
   background-color: lightyellow;
+  flex-direction: column;
+  display: flex;
+  margin-right: 25px;
 }
 .table #restaurent-list {
   text-align: center;
   justify-content: left;
   height: fit-content;
-  width: 700px;
+  width: 1200px;
   background-color: lightyellow;
-  border: 2px;
+  border: 3px;
+  flex-direction: column;
+  display: flex;
+  margin-right: 25px;
