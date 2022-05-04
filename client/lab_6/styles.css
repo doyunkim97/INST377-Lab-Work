@@ -31,6 +31,7 @@ body {
 }
 .columns {
   display: flex;
+  justify-content: flex-start;
   
 }
 
@@ -91,12 +92,18 @@ body {
   float: left;
 }
 
-.third {
-  display: flex;
-  padding: 10px;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 5px;
-  margin: auto;
+.table {
+  text-align: center;
+  justify-content: left;
+  height: fit-content;
+  width: 700px;
+  border: 2px;
+  background-color: lightyellow;
 }
-
+.table #restaurent-list {
+  text-align: center;
+  justify-content: left;
+  height: fit-content;
+  width: 700px;
+  background-color: lightyellow;
+  border: 2px;
